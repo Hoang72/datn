@@ -4,6 +4,7 @@
     ViewBag.Title = "Tất cả sản phẩm - KP PET'S HOME";
     Layout = "~/Views/Shared/_LayoutUser.cshtml";
 }
+
 @*<section id="breadcrumb-wrapper2" class="breadcrumb-w-img">
     <div class="breadcrumb-overlay"></div>
     <div class="breadcrumb-content">
@@ -23,26 +24,26 @@
         </div>
     </div>
 </section>*@
+
 <div id="PageContainer" class="is-moved-by-drawer">
-    <main class="main-content" role="main">
+    <main class="main-content" role="main"); background-size: cover">
         <section id="collection-wrapper">
             <div class="wrapper">
-
                 <div class="inner">
                     <div class="grid">
                         <div class="grid__item large--three-quarters medium--one-whole small--one-whole float-right">
-
                             <div class="collection-content-wrapper">
+                            
                                 <div class="collection-head">
                                     <div class="grid">
                                         <div class="grid__item large--two-thirds medium--one-whole small--one-whole">
                                             <div class="collection-title">
-                                                <h1>Tất cả sản phẩm</h1>
+                                                <h1  style="color: #103a78; font-size: 25px; font-family: DINRoundOT ">Tất cả sản phẩm</h1>
                                             </div>
                                         </div>
                                     </div>
-
                                 </div>
+
                                 <div class="collection-body">
                                     <div class="grid-uniform product-list">
 
@@ -59,57 +60,49 @@
                                                             </div>
                                                             <div class="product-actions text-center clearfix">
                                                                 <div>
-
                                                                     @if (i.SOLUONG != 0)
-                                                                    {<button type="button" class="btnBuyNow buy-now medium--hide small--hide" onclick="window.location.href='@Url.Action("ThemGiohang", "GioHang", new { @iMASP = i.MASP, @strURL = Request.Url.ToString() })'"><span>THÊM GIỎ HÀNG</span></button>}
+                                                                    {<button type="button" class="btnBuyNow buy-now medium--hide small--hide" onclick="window.location.href='@Url.Action("ThemGiohang", "GioHang", new { @iMASP = i.MASP, @strURL = Request.Url.ToString() })' " style=" background-color:  #47b5e8"><span>THÊM GIỎ HÀNG</span></button>}
                                                                     @if (i.SOLUONG == 0)
-                                                                    {<button type="button" class="btnBuyNow buy-now medium--hide small--hide" onclick="window.location.href=" #"><span>TẠM HẾT HÀNG</span></button>}
+                                                                    {<button type="button" class="btnBuyNow buy-now medium--hide small--hide" onclick="window.location.href=" #" style=" background-color:  #47b5e8"><span>TẠM HẾT HÀNG</span></button>}
 
                                                                 </div>
                                                             </div>
 
                                                         </div>
+
                                                         <!--thanh nhỏ ở dưỡi-->
                                                         @*<div class="product-variants-info">
-            <div class="product-variants-count">
-
-                <div class="list-variants-img medium--hide small--hide">
-                    <div class="inner">
-                        <ul class="no-bullets clearfix text-center">
-                            @Html.Action("listhinhanhnhoduoi", new { id = i.MASP })
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>*@
+                                                            <div class="product-variants-count">
+                                                                <div class="list-variants-img medium--hide small--hide">
+                                                                    <div class="inner">
+                                                                        <ul class="no-bullets clearfix text-center">
+                                                                            @Html.Action("listhinhanhnhoduoi", new { id = i.MASP })
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>*@
 
                                                         <div class="product-title">
-                                                            <a href="@Url.Action("Chitiet","User",new { id = i.MASP })">@i.TENSP</a>
+                                                            <a href="@Url.Action("Chitiet","User",new { id = i.MASP })" style="color: #103a78">@i.TENSP</a>
                                                         </div>
 
                                                         <div class="product-price clearfix">
                                                             <span class="current-price">@String.Format("{0:0,0}", @i.DONGIABAN)₫</span>
 
                                                             @*<span class="original-price"><s>580,000₫</s></span>*@ <!--Gia goc-->
-
                                                         </div>
                                                     </div>
-
-
                                                 </div>
-
                                             </div>
-
-
-
-
-
                                         }
                                     </div>
+
                                     <div>
                                         Trang @(@Model.PageNumber>Model.PageCount?Model.PageCount: Model.PageNumber)/@Model.PageCount
                                     </div>
-                                    <div align="center">@Html.PagedListPager(Model, page => Url.Action("sanpham", new { page = page }))</div>
+
+                                    <div align="center" >@Html.PagedListPager(Model, page => Url.Action("sanpham", new { page = page }))</div>
                                     <link href="~/Content/phantrang.css" rel="stylesheet" />
 
                                 </div>
@@ -123,23 +116,22 @@
                             <div class="collection-sidebar-wrapper">
                                 <div class="grid">
 
-
                                     <div class="grid__item large--one-whole medium--one-half small--one-whole">
                                         <div class="collection-categories">
-                                            <button class="accordion cs-title col-sb-trigger">
+                                            <button class="accordion cs-title col-sb-trigger" style="background: #47b5e8">
                                                 <span>Thương Hiệu</span>
                                             </button>
-                                            <div class="panel">
+                                            <div class="panel" style="background: #e5f1fd">
                                                 @Html.Action("thuonghieu")
                                             </div>
                                         </div>
                                     </div>
                                     <div class="grid__item large--one-whole medium--one-half small--one-whole">
                                         <div class="collection-filter-type">
-                                            <button class="accordion cs-title col-sb-trigger">
+                                            <button class="accordion cs-title col-sb-trigger" style="background: #47b5e8">
                                                 <span>Loại sản phẩm</span>
                                             </button>
-                                            <div class="panel sidebar-sort">
+                                            <div class="panel sidebar-sort" style="background: #e5f1fd">
                                                 @Html.Action("loai")
 
                                             </div>
@@ -159,7 +151,7 @@
 <div id="modalAddComplete">
 </div>
 
-<button type="button" id="modalAddCompleteBtn" style="display: none;"></button>
+<button type="button" id="modalAddCompleteBtn" style="display: none;" ></button>
 
 <script>
     // Get the modal
