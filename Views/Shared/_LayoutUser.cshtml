@@ -322,23 +322,25 @@
                                 </li>
                             </ul>
                         </div>
+
                         <div class="hc-search-wrapper">
                             <a href="javascript:void(0)">Tìm kiếm</a>
-                            <div class="search-bar-header">
-                                <div class="search-form-wrapper">
+                            <div class="search-bar-header" style=" box-shadow:none;background:none">
+                                <div class="search-form-wrapper" style="border-radius:10px">
                                     <form action="@Url.Action("Ketquatimkiem", "User")" class="searchform-categoris ultimate-search">
-                                        <div class="wpo-search">
-                                            <div class="wpo-search-inner">
-                                                <select class="select-collection1">
+                                        <div class="wpo-search" style="border-radius:10px">
+                                            <div class="wpo-search-inner" style="border-radius:10px">
+                                                <select class="select-collection1" style="border-radius:10px 0px 0px 10px">
                                                     <option>Tất cả</option>
                                                 </select>
+
                                                 <div class="input-group">
                                                     @using (Html.BeginForm(FormMethod.Get))
                                                     {
 
-                                                        <input id="SearchString" name="SearchString" type="text" value="" placeholder="Tìm kiếm....">
+                                                        <input id="SearchString" name="SearchString" type="text" value="" placeholder="Tìm kiếm..." style="border-radius:10px 0px 0px 10px; border:none" >
                                                         <span class="input-group-btn">
-                                                            <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                                            <button type="submit" style="background: white; border: none; border-radius: 0px 10px 10px 0px"><i class="fa fa-search" aria-hidden="true" style="background: white; color: #AFB1BD "></i></button>
                                                         </span>
                                                     }
                                                 </div>

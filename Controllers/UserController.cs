@@ -249,6 +249,7 @@ namespace WebsiteThuCungBento.Controllers
         #region Đăng nhập tài khoản người dùng
         [HttpPost]
         public ActionResult dangnhap(DangNhapModel model)
+
         {
             var mahoa_matkhaudangnhap = MahoaMD5.GetMD5(model.matkhau);
             if (ModelState.IsValid)
@@ -262,10 +263,6 @@ namespace WebsiteThuCungBento.Controllers
                 }
                 else
                     ViewBag.Thongbao = "Tên đăng nhập hoặc mật khẩu không đúng";
-            }
-            else
-            {
-
             }
             return View(model);
         }

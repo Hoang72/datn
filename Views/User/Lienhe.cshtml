@@ -19,13 +19,8 @@
                     </div>
                     <div class="breadcrumb-small">
                         <a href="@Url.Action("index","User")" title="Quay trở về trang chủ">Trang chủ</a>
-
-
-
                         <span aria-hidden="true">/</span>
                         <span>Liên Hệ</span>
-
-
                     </div>
                 </div>
             </div>
@@ -64,7 +59,8 @@
             background-color: #e35450;
         }
 </style>
-<div id="PageContainer" class="is-moved-by-drawer">
+
+<div id="PageContainer" class="is-moved-by-drawer" style="background:url(../img/bg-danhmuc.jpg); background-size:cover">
     <main class="main-content" role="main">
         <section id="collection-wrapper">
             <div class="wrapper">
@@ -72,84 +68,83 @@
                     <div class="grid">
 
                         <div class="wrap">
-                            <div class="sidebar right">
+                            <div class="sidebar right" style="width:60%; margin:0">
                                 <div class="sidebar-content">
                                     <div class="order-summary order-summary-is-collapsed">
-                                        <h1 style="color:black;text-align:center"><b>Bản Đồ</b></h1><hr />
-                                        <div class="order-summary-sections">
-                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.4205909621646!2d106.78291301471481!3d10.85558036069626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175276e812813e1%3A0x6e4c23af96c88480!2zVHJ1bmcgVMOibSDEkMOgbyBU4bqhbyBOaMOibiBM4buxYyBDaOG6pXQgTMaw4bujbmcgQ2FvIC0gSFVURUNI!5e0!3m2!1sen!2sus!4v1656350168167!5m2!1sen!2sus" width="450" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                     
+                                        <div class="order-summary-sections">                                      
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.837441719075!2d108.14731181086997!3d16.073923184542025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314218d68dff9545%3A0x714561e9f3a7292c!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBCw6FjaCBLaG9hIC0gxJDhuqFpIGjhu41jIMSQw6AgTuG6tW5n!5e0!3m2!1svi!2s!4v1683223121208!5m2!1svi!2s" width="100%" height="450" style="border:0; border-radius:10px" allowfullscreen="" loading="lazy"></iframe>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="sidebar left">
+                            <!--<div class="sidebar left">
                                 <div class="sidebar-content">
                                     <div class="order-summary order-summary-is-collapsed">
-                                        <h1 style="color:black;text-align:center"> <b>Thông Tin Liên Hệ</b></h1><hr />
-                                        <div class="order-summary-sections">
+                                        <h1 style="color:white ;text-align:center" > <b>Thông Tin Liên Hệ</b></h1><hr />
+                                        <div class="order-summary-sections" style="background:white">
                                             <div class="ft-lienhe">
-                                                Quản lý: Nhóm 08
+                                                Họ và tên: Phạm Sỹ Hoàng
                                             </div>
                                             <div class="ft-lienhe">
-                                                Địa chỉ: 19DTHC5 - Đại học Công Nghệ TP.HCM
+                                                Địa chỉ: 19TCLC_DT2 - Đại học Bách Khoa Đà Nẵng
                                             </div>
                                             <div class="ft-lienhe">
-                                                Số điện thoại: <a href="tel:0865329280">0865329280</a>
+                                                Số điện thoại: <a href="tel:0865329280">0964588035</a>
                                             </div>
                                             <div class="ft-lienhe">
-                                                Email: <a href="mailto:giathanh.luu@outlook.com.vn">giathanh.luu@outlook.com.vn</a>
+                                                Email: <a href="binhmt2008@gmail.com">binhmt2008@gmail.com</a>
                                             </div>
-
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div>-->
 
-                            <div class="sidebar left" style="width:450px;">
+                            <div class="sidebar left" style="width: 450px; border: 2px solid #103a78; border-radius: 10px; padding: 30px; width:37%; margin:0; background: white ">
                                 <div class="sidebar-content">
                                     <div class="order-summary order-summary-is-collapsed">
-                                        <hr />
-                                        <h1 style="color:black;text-align:center">Liên Hệ Với Shop</h1><hr />
-                                        <div class="order-summary-sections">
+                                       
+                                        <h1 style="color: #103a78; text-align: center; margin-bottom:20px">Liên Hệ Với Shop</h1><hr />
+                                        <div class="order-summary-sections" style="color: #103A71; font-weight: 500">
 
                                             @using (Html.BeginForm("Lienhe", "User", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
                                             {
                                                 @Html.AntiForgeryToken()
-                                                <div class="form-group" style="text-align:left;">
+                                                <div class="form-group" style="text-align:left; padding-bottom:20px">
 
                                                     @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
                                                     <div style="color:red;font-size:small;text-align:initial">
                                                         @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
                                                     </div>
-                                                    <div class="col-md-10">
-                                                        <input class="form-control text-box single-line input-full" data-val="true" data-val-required=" Họ tên không được để trống. " id="Name" name="Name" type="text" value="" placeholder="Họ tên">
+                                                    <div class="col-md-10" style="padding-top: 10px; color: #82828B ">
+                                                        <input class="form-control text-box single-line input-full" data-val="true" data-val-required=" Họ tên không được để trống. " id="Name" name="Name" type="text" value="" placeholder="Nhập họ và tên" style="font-size: 15px">
                                                     </div>
                                                 </div>
-                                                <div class="form-group" style="text-align:left;">
+                                                <div class="form-group" style="text-align: left; padding-bottom: 20px">
 
                                                     @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
                                                     <div style="color:red;font-size:small;text-align:initial">
                                                         @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
                                                     </div>
-                                                    <div class="col-md-10">
-                                                        <input class="form-control text-box single-line input-full" data-val="true" data-val-email="The Email: field is not a valid e-mail address." placeholder="Email" data-val-required=" Email không được để trống. " id="Email" name="Email" type="email" value="">
+                                                    <div class="col-md-10" style="padding-top: 10px; color: #82828B">
+                                                        <input class="form-control text-box single-line input-full" data-val="true" data-val-email="The Email: field is not a valid e-mail address." placeholder="Nhập email" data-val-required=" Email không được để trống. " id="Email" name="Email" type="email" value="" style="font-size: 15px">
                                                     </div>
                                                 </div>
-                                                <div class="form-group" style="text-align:left;">
+                                                <div class="form-group" style="text-align: left; padding-bottom: 20px">
 
                                                     @Html.LabelFor(model => model.Subject, htmlAttributes: new { @class = "control-label col-md-2" })
                                                     <div style="color:red;font-size:small;text-align:initial">
                                                         @Html.ValidationMessageFor(model => model.Subject, "", new { @class = "text-danger" })
                                                     </div>
-                                                    <div class="col-md-10">
-                                                        <input class="form-control text-box single-line input-full" data-val="true" data-val-required=" Tiêu đề không được để trống. " placeholder="Tiêu đề" id="Subject" name="Subject" type="text" value="">
+                                                    <div class="col-md-10" style="padding-top: 10px; color: #82828B">
+                                                        <input class="form-control text-box single-line input-full" data-val="true" data-val-required=" Tiêu đề không được để trống. " placeholder="Nhập tiêu đề" id="Subject" name="Subject" type="text" value="" style="font-size: 15px">
                                                     </div>
                                                 </div>
-                                                <div class="form-group" style="text-align:left;">
+                                                <div class="form-group" style="text-align: left; padding-bottom: 20px">
 
                                                     @Html.LabelFor(model => model.Message, htmlAttributes: new { @class = "control-label col-md-2" })
-                                                    <div class="col-md-10">
+                                                    <div class="col-md-10" style="padding-top: 10px">
                                                         <textarea class="form-control text-box single-line input-full" data-val="true" data-val-required=" Nội dung không được để trống. " id="Message" name="Message"></textarea>
                                                     </div>
                                                 </div>
@@ -157,7 +152,7 @@
 
                                                 <div class="form-group">
                                                     <div class="col-md-offset-2 col-md-10">
-                                                        <input type="submit" onclick="" value="Gửi" class="send btn btn--full" />
+                                                        <input type="submit" onclick="" value="Gửi" class="send btn btn--full" style="background: #103a78"/>
                                                     </div>
                                                 </div>
 

@@ -33,16 +33,14 @@
     </div>
 </section>*@
 
-<div id="PageContainer" class="is-moved-by-drawer">
+<div id="PageContainer" class="is-moved-by-drawer" style="background: url(../img/bg-danhmuc.jpg); background-size: cover; color: #103A71 ">
     <main class="main-content" role="main">
         <section id="page-wrapper">
             <div class="wrapper">
                 <div class="inner">
-
                     <div class="grid">
 
                         <div class="grid__item large--one-third push--large--one-third text-center">
-
 
                             <div class="note form-success" id="ResetSuccess" style="display:none;">
                                 Chúng tôi đã gửi một email với đường dẫn để giúp bạn cập nhật mật khẩu.
@@ -52,7 +50,7 @@
                                 <form accept-charset="UTF-8" method="post">
                                     <input name="form_type" type="hidden" value="customer_login">
                                     <input name="utf8" type="hidden" value="✓">
-                                    <h1 style="font-size:35px;">Đăng nhập</h1>
+                                    <p style="font-size: 30px; color: #103a78; margin-bottom: 30px">Đăng Nhập</p>
                                     <h4 style="color:red; text-align:center"> @ViewBag.Thongbao</h4>
                                     @using (Html.BeginForm("dangnhap", "User", FormMethod.Post))
                                     {
@@ -62,35 +60,35 @@
                                             <div style="color:red;font-size:small;text-align:initial">
                                                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                                             </div>
-                                            <div class="form-group" style="text-align:left;">
+
+                                            <div class="form-group" style="text-align:left; margin-bottom: 20px" >
                                                 @Html.LabelFor(model => model.tendn, htmlAttributes: new { @class = "control-label col-md-2" })
-                                                <div style="color:red;font-size:small;text-align:initial">
+                                                <div style="color: red; font-size: small; text-align: initial; margin-bottom: 10px">
                                                     @Html.ValidationMessageFor(model => model.tendn, "", new { @class = "text-danger" })
                                                 </div>
                                                 <div class="col-md-10">
-                                                    <input class="form-control text-box single-line input-full " data-val="true" data-val-required=" Tên đăng nhập không được để trống. " id="tendn" name="tendn" type="text" value="">
+                                                    <input class="form-control text-box single-line input-full " data-val="true" data-val-required=" Tên đăng nhập không được để trống. " id="tendn" name="tendn" type="text" value="" style="border-radius: 10px">
 
                                                 </div>
                                             </div>
 
                                             <div class="form-group" style="text-align:left;">
                                                 @Html.LabelFor(model => model.matkhau, htmlAttributes: new { @class = "control-label col-md-2" })
-                                                <div style="color:red;font-size:small;text-align:initial">
+                                                <div style="color: red; font-size: small; text-align: initial; margin-bottom: 10px" >
                                                     @Html.ValidationMessageFor(model => model.matkhau, "", new { @class = "text-danger" })
                                                 </div>
-                                                <div class="col-md-10">
-                                                    <input class="form-control text-box single-line input-full" data-val="true" data-val-length="Độ dài mật khẩu ít nhất 6 - 20 ký tự. " data-val-length-max="20" data-val-length-min="6" data-val-required="Mật khẩu không được để trống. " id="matkhau" name="matkhau" type="password" value="">
+                                                <div class="col-md-10" style="background: white" >
+                                                    <input class="form-control text-box single-line input-full" data-val="true" data-val-length="Độ dài mật khẩu ít nhất 6 - 20 ký tự. " data-val-length-max="20" data-val-length-min="6" data-val-required="Mật khẩu không được để trống. " id="matkhau" name="matkhau" type="password" value="" style="border-radius: 10px">
 
                                                 </div>
                                             </div>
 
-                                            <div class="form-group">
+                                            <div class="form-group" style="margin-top: 30px">
                                                 <div class="col-md-offset-2 col-md-10">
-                                                    <input type="submit" value="Đăng nhập" class="btn btn--full" />
-                                                    <p><a href="@Url.Action("index","User")">Trở về</a></p>
-                                                    <p><a href="@Url.Action("dangky","User")">Đăng kí</a></p>
-
-                                                    <p><a href="@Url.Action("QuenMK","User")">Quên mật khẩu?</a></p>
+                                                    <input type="submit" value="Đăng nhập" class="btn btn--full" style="margin-bottom: 30px; background: #103a78; color: white; border-radius: 10px"/>
+                                                    <p style="margin-bottom:10px"><a href="@Url.Action("index","User")" style="color: #676767 ">Trở về</a></p>
+                                                    <p style="margin-bottom:10px"><a href="@Url.Action("dangky","User")" style="color: #676767 ">Đăng kí</a></p>
+                                                    <p style="margin-bottom:10px"><a href="@Url.Action("QuenMK","User")" style="color: #676767 ">Quên mật khẩu?</a></p>
                                                 </div>
                                             </div>
                                         </div>
