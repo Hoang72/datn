@@ -52,6 +52,7 @@
                                     <input name="utf8" type="hidden" value="✓">
                                     <p style="font-size: 30px; color: #103a78; margin-bottom: 30px">Đăng Nhập</p>
                                     <h4 style="color:red; text-align:center"> @ViewBag.Thongbao</h4>
+
                                     @using (Html.BeginForm("dangnhap", "User", FormMethod.Post))
                                     {
                                         @Html.AntiForgeryToken()

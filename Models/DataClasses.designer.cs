@@ -215,9 +215,81 @@ namespace WebsiteThuCungBento.Models
 				return this.GetTable<KHACHHANG>();
 			}
 		}
+		public System.Data.Linq.Table<TUONGTAC> TUONGTACs
+		{
+			get
+			{
+				return this.GetTable<TUONGTAC>();
+			}
+
+		}
+
 	}
-	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ADMIN")]
+	[global::System.Data.Linq.Mapping.TableAttribute(Name = "dbo.TUONGTAC")]
+	public partial class TUONGTAC
+	{
+
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+
+		private int _MAKH;
+
+		private int _MASP;
+
+		private int _VIEW;
+		public int MAKH
+		{
+			get
+			{
+				return this._MAKH;
+			}
+			set
+			{
+				if ((this._MAKH != value))
+				{
+
+					this._MAKH = value;
+
+				}
+			}
+
+		}
+		public int MASP
+		{
+			get
+			{
+				return this._MASP;
+			}
+			set
+			{
+				if ((this._MASP != value))
+				{
+
+					this._MASP = value;
+
+				}
+			}
+
+		}
+		public int VIEW
+		{
+			get
+			{
+				return this._VIEW;
+			}
+			set
+			{
+				if ((this._VIEW!= value))
+				{
+
+					this._VIEW = value;
+
+				}
+			}
+
+		}
+	}
+
+		[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.ADMIN")]
 	public partial class ADMIN : INotifyPropertyChanging, INotifyPropertyChanged
 	{
 		

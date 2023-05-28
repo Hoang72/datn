@@ -123,8 +123,30 @@ namespace WebsiteThuCungBento.Controllers
                              MOTA = a.MOTA,
                              TENMAUSAC = d.TENMAUSAC,
                              HINH1 = h.HINH1,
-                             THANHTOANON = a.THANHTOANON
+                             //THANHTOANON = a.THANHTOANON
                          };
+
+            KHACHHANG kh = (KHACHHANG)Session["Taikhoan"];
+
+            int idUser = kh.MAKH;
+
+            var sanpham = data.SANPHAMs.SingleOrDefault(n => n.MASP == id);
+
+            int maSP = sanpham.MASP;
+
+            TUONGTAC tuongtac = new TUONGTAC();
+            var check = data.TUONGTACs.FirstOrDefault(x => x.MAKH.Equals(idUser) && x.MASP.Equals(maSP));
+            if(check!=null)
+            {
+                var view = from v in data.TUONGTACs
+                           where v.MAKH == idUser && v.MASP == maSP
+                           select v;
+                foreach (var i in view )
+                {
+                    //var old = data.TUONGTACs.
+                }
+            }
+            
             return View(detail.SingleOrDefault());
         }
         #endregion
