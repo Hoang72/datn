@@ -128,14 +128,14 @@ namespace WebsiteThuCungBento.Controllers
 
             KHACHHANG kh = (KHACHHANG)Session["Taikhoan"];
 
-            int idUser = kh.MAKH;
+            //int idUser = kh.MAKH;
 
-            var sanpham = data.SANPHAMs.SingleOrDefault(n => n.MASP == id);
+            //var sanpham = data.SANPHAMs.SingleOrDefault(n => n.MASP == id);
 
-            int maSP = sanpham.MASP;
+            //int maSP = sanpham.MASP;
 
             TUONGTAC tuongtac = new TUONGTAC();
-            var check = data.TUONGTACs.FirstOrDefault(x => x.MAKH.Equals(idUser) && x.MASP.Equals(maSP));
+            /*var check = data.TUONGTACs.FirstOrDefault(x => x.MAKH.Equals(idUser) && x.MASP.Equals(maSP));
             if(check!=null)
             {
                 var view = from v in data.TUONGTACs
@@ -145,7 +145,7 @@ namespace WebsiteThuCungBento.Controllers
                 {
                     //var old = data.TUONGTACs.
                 }
-            }
+            }*/
             
             return View(detail.SingleOrDefault());
         }
